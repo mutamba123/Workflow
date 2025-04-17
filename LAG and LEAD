@@ -1,0 +1,48 @@
+LAG and LEAD on orders
+
+SELECT
+order_id,
+customer_name,
+region,order_amount,
+LAG(order_amount) OVER (PARTITION BY region ORDER
+BY order_date) AS prev_order_amount,
+LEAD(order_amount) OVER (PARTITION BY region ORDER
+BY order_date) AS next_order_amount
+FROM orders;
+LAG and LEAD on order_items
+SELECT
+item_id,
+product_name,
+quantity,
+unit_price,
+(quantity * unit_price) AS total_price,
+LAG(quantity * unit_price) OVER (PARTITION BY
+product_name ORDER BY item_id) AS prev_price,
+LEAD(quantity * unit_price) OVER (PARTITION BY
+product_name ORDER BY item_id) AS next_price
+FROM order_items;
+
+LAG and LEAD on products
+
+SELECT
+product_id,
+product_name,
+category,
+sales_count,
+LAG(sales_count) OVER (PARTITION BY category ORDER
+BY sales_count) AS prev_sales,
+LEAD(sales_count) OVER (PARTITION BY category ORDER
+BY sales_count) AS next_salesFROM products;
+
+LAG and LEAD on customers
+
+SELECT
+customer_id,
+customer_name,
+city,
+total_spent,
+LAG(total_spent) OVER (PARTITION BY city ORDER BY
+total_spent) AS prev_spent,
+LEAD(total_spent) OVER (PARTITION BY city ORDER BY
+total_spent) AS next_spent
+FROM customers;
