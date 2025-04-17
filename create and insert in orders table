@@ -1,0 +1,21 @@
+ORDERS 
+
+CREATE TABLE orders ( 
+order_id NUMBER PRIMARY KEY, 
+customer_name VARCHAR2(50), 
+order_date DATE, 
+order_amount NUMBER, 
+region VARCHAR2(50) 
+);
+ 
+
+INSERT INTO orders VALUES (101, 'John', TO_DATE('2024-01-01', 'YYYY-MM-DD'), 1200, 
+'North'); 
+INSERT INTO orders VALUES (102, 'Amy', TO_DATE('2024-01-02', 'YYYY-MM-DD'), 950, 
+'North'); 
+INSERT INTO orders VALUES (103, 'Mike', TO_DATE('2024-01-03', 'YYYY-MM-DD'), 3000, 
+'South'); 
+INSERT INTO orders VALUES (104, 'Sara', TO_DATE('2024-01-04', 'YYYY-MM-DD'), 2800, 
+'South'); 
+INSERT INTO orders VALUES (105, 'Tom', TO_DATE('2024-01-05', 'YYYY-MM-DD'), 1500, 
+'North'); 
