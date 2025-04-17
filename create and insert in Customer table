@@ -1,0 +1,18 @@
+CUSTOMER 
+
+CREATE TABLE customers ( 
+customer_id INT, 
+customer_name VARCHAR(50), 
+city VARCHAR(50), 
+total_spent DECIMAL(10, 2), 
+join_date DATE 
+); 
+INSERT INTO customers VALUES 
+(1, 'Alice', 'New York', 500.00, TO_DATE('2020-03-15', 'YYYY-MM-DD')), 
+(2, 'Bob', 'New York', 750.00, TO_DATE('2019-06-21', 'YYYY-MM-DD')), 
+(3, 'Charlie', 'Los Angeles', 900.00, TO_DATE('2021-01-10', 'YYYY-MM-DD')), 
+(4, 'Diana', 'Los Angeles', 1100.00, TO_DATE('2018-12-05', 'YYYY-MM-DD')), 
+(5, 'Ethan', 'Chicago', 650.00, TO_DATE('2020-09-30', 'YYYY-MM-DD')), 
+(6, 'Fiona', 'Chicago', 870.00, TO_DATE('2019-04-18', 'YYYY-MM-DD')), 
+(7, 'George', 'Chicago', 790.00, TO_DATE('2022-03-11', 'YYYY-MM-DD')), 
+(8, 'Hannah', 'New York', 1200.00, TO_DATE('2018-08-25', 'YYYY-MM-DD'));
