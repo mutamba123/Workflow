@@ -1,0 +1,13 @@
+PRODUCTS 
+
+CREATE TABLE products ( 
+product_id NUMBER PRIMARY KEY, 
+product_name VARCHAR2(50), 
+category VARCHAR2(50), 
+price NUMBER, sales_count NUMBER 
+); 
+INSERT INTO products VALUES (1, 'Laptop', 'Electronics', 800, 150); 
+INSERT INTO products VALUES (2, 'Tablet', 'Electronics', 400, 200); 
+INSERT INTO products VALUES (3, 'Sofa', 'Furniture', 600, 100); 
+INSERT INTO products VALUES (4, 'Chair', 'Furniture', 100, 300); 
+INSERT INTO products VALUES (5, 'Smartphone', 'Electronics', 700, 250); 
